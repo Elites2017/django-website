@@ -8,4 +8,8 @@ def index(request):
 
 
 def contact(request):
-    return render(request, 'personal/pages.html')
+    contents = [
+        'You can contact me through e-mail, whatsapp, twitter, instagram',
+        'my email is javafolabi@gmail.com, VictorIAfolabi1, victor_iyiola'
+    ]
+    return render(request, 'personal/pages.html', {'contents': contents})
