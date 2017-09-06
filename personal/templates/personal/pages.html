@@ -1,0 +1,8 @@
+{% extends "personal/_layout.html" %}
+{% block body %}
+  {% if contents %}
+    {% for content in contents %}
+      {{ content }}
+    {% endfor %}
+  {% endif %}
+{% endblock  %}
