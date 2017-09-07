@@ -1,4 +1,21 @@
 {% extends "public/_layout.html" %}
 {% block body %}
-  <h1>Music app</h1>
+  <h1 class="page-header">Music app</h1>
+  {% load staticfiles %}
+  {% if albums %}
+    <div class="row albums">
+      {% for album in albums %}
+        <a href="/music/{{ album.id }}" class="col-md-6 col-lg-3">
+          <div class="card">
+            <img src="{% static album.logo %}" alt="{{ album.title }}" class="card-img-top img-thumbnail thumbnail">
+            <div class="card-block">
+              <h3 class="card-title">{{ album.title }} by {{ album.artist }}</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus adipisci amet at consequuntur
+                cupiditate dignissimos distinctio earum.</p>
+            </div>
+          </div>
+        </a>
+      {% endfor %}
+    </div>
+  {% endif %}
 {% endblock %}
