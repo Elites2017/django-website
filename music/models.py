@@ -9,4 +9,4 @@ class Album(models.Model):
 
 
 class Song(models.Model):
-    album = models.ForeignKey(Albums, on_delete=models.CASCADE)
+    album = models.ForeignKey(Album, on_delete=models.CASCADE)
