@@ -107,7 +107,9 @@ li {
 .albums a:hover {
   text-decoration: none;
 }
-
+.album {
+  margin-bottom: 10px;
+}
 .card {
   background-color: #666;
   text-shadow: none;
