@@ -32,6 +32,7 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     'public',
+    'music',
     'blog',
     'django.contrib.admin',
     'django.contrib.auth',

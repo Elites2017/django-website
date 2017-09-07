@@ -1,7 +1,10 @@
 {% include "public/_includes/_header.html" %}
-<div class="site-wrapper">
-  <div class="site-wrapper-inner">
-    <div class="cover-container">
-      {% include "public/_includes/_navbar.html" %} 
-        {% block body %}{% endblock %} 
-      {% include "public/_includes/_footer.html" %}
+  <div class="container-fluid">
+    {% include "public/_includes/_navbar.html" %} 
+    <div class="container-body">
+      <div class="inner">
+        {% block body %}{% endblock %}
+      </div>
+    </div>
+  </div>
+{% include "public/_includes/_footer.html" %}
