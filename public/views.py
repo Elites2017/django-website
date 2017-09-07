@@ -4,7 +4,7 @@ from django.shortcuts import render
 
 
 def index(request):
-    return render(request, 'personal/index.html')
+    return render(request, 'public/index.html')
 
 
 def contact(request):
@@ -12,4 +12,4 @@ def contact(request):
         'You can contact me through e-mail, whatsapp, twitter, instagram',
         'my email is javafolabi@gmail.com, VictorIAfolabi1, victor_iyiola'
     ]
-    return render(request, 'personal/pages.html', {'contents': contents})
+    return render(request, 'public/pages.html', {'contents': contents})
