@@ -7,6 +7,9 @@ class Album(models.Model):
     genre = models.CharField(max_length=255, name="genre")
     logo = models.TextField(name="logo")
 
+    def __str__(self):
+        return 'artist = {}, title = {}, genre = {}, logo = {}'.format(self.artist, self.title, self.genre, self.logo)
+
 
 class Song(models.Model):
     album = models.ForeignKey(Album, on_delete=models.CASCADE)
