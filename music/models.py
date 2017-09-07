@@ -8,10 +8,13 @@ class Album(models.Model):
     logo = models.TextField(name="logo")
 
     def __str__(self):
-        return 'artist = {}, title = {}, genre = {}, logo = {}'.format(self.artist, self.title, self.genre, self.logo)
+        return 'artist: {}, title: {}'.format(self.artist, self.title)
 
 
 class Song(models.Model):
     album = models.ForeignKey(Album, on_delete=models.CASCADE)
     title = models.CharField(max_length=255)
     file_type = models.CharField(max_length=5)
+
+    def __str__(self):
+        return 'title: {}, album: {}'.format(self.title, self.album)
