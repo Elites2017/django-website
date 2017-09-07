@@ -1,7 +1,7 @@
 from django.db import models
 
 
-class Posts(models.Model):
+class Post(models.Model):
     title = models.CharField(max_length=255, name="title")
     body = models.TextField(name="body")
     date = models.DateTimeField()
