@@ -8,4 +8,5 @@ def index(request):
 
 
 def detail(request, album_id):
-    return render(request, 'music/detail.html', {'album_id': album_id})
+    album = Album.objects.filter(id=album_id)[0]
+    return render(request, 'music/detail.html', {'album': album})

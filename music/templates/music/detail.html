@@ -1,6 +1,17 @@
 {% extends "public/_layout.html" %}
 {% block body %}
-  <div class="col-md-8">
-    
-  </div>
+  {% load staticfiles %}
+  <section class="row">
+    <div class="col-md-4">
+      <img src="{% static album.logo %}" class="img-fluid img-responsive">
+    </div>
+    <div class="col-md-8">
+      <h1 class="page-header">{{ album.title }} by {{ album.artist }}</h1>
+      <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus dolorum eaque earum hic
+        illo,
+        molestiae
+        quia repudiandae vitae. A commodi cupiditate deleniti illo laudantium quaerat quo similique totam velit
+        voluptate.</p>
+    </div>
+  </section>
 {% endblock %}

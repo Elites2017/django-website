@@ -7,7 +7,7 @@
       {% for album in albums %}
         <a href="/music/{{ album.id }}" class="col-md-6 col-lg-3">
           <div class="card">
-            <img src="{% static album.logo %}" alt="{{ album.title }}" class="card-img-top img-thumbnail thumbnail">
+            <img src="{% static album.logo %}" alt="{{ album.title }}" class="card-img-top thumbnail">
             <div class="card-block">
               <h3 class="card-title">{{ album.title }} by {{ album.artist }}</h3>
               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus adipisci amet at consequuntur
