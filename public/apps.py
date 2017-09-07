@@ -1,5 +1,5 @@
 from django.apps import AppConfig
 
 
-class PersonalConfig(AppConfig):
-    name = 'personal'
+class PublicConfig(AppConfig):
+    name = 'public'
