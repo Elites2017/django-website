@@ -7,4 +7,4 @@ class Post(models.Model):
     date = models.DateTimeField()
 
     def __str__(self):
-        return self.title
+        return 'title: {}, date: {} '.format(self.title, self.date)
