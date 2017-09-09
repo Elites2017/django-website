@@ -97,11 +97,15 @@ li {
  * Contents
  * ===================================================================================== */
 .list-group-item {
+  background: #636c72;
+  color: #1d1e1f;
   cursor: pointer;
+  text-shadow: none;
 }
 
 .list-group-item:hover {
-  background-color: #EEE;
+  background-color: #1d1e1f;
+  color: #636c72;
 }
 
 .albums a:hover {

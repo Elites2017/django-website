@@ -8,7 +8,7 @@ class Album(models.Model):
     logo = models.TextField(name="logo")
 
     def __str__(self):
-        return 'artist: {}, title: {}'.format(self.artist, self.title)
+        return 'artist: {} in {}'.format(self.artist, self.title)
 
 
 class Song(models.Model):
