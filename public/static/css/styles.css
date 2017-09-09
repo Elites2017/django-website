@@ -25,6 +25,11 @@ li {
   list-style: none;
 }
 
+h2 a:hover {
+  text-decoration: none;
+  opacity: .8;
+}
+
 /* Custom default button */
 .btn-secondary,
 .btn-secondary:hover,
