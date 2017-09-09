@@ -1,10 +1,10 @@
-{% extends "public/_layout.html" %} 
+{% extends "public/_layout.html" %}
 {% block body %}
+  <h1>All Blog</h1>
   {% for post in object_list %}
-    <h1 class="cover-heading">{{ post.title }} on {{ post.date|date:"Y-m-d" }}</h1>
-    <p>{{ post.body }}</p>
+    <div class="inner">
+      <h2>{{ post.title }} <em class="text-muted">on {{ post.date|date:"Y-m-d" }}</em></h2>
+      <p class="lead">{{ post.body }}</p>
+    </div>
   {% endfor %}
-  <h2>Victor I. Afolabi.</h2>
-  <p class="lead">Artificial intelligence engineer and a Software developer. A visionary and a motivational speaker who is gonna change the whole world.</p>
-  <p class="lead"><a href="#" class="btn btn-lg btn-default">Learn more</a></p>
 {% endblock %}
