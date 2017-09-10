@@ -12,11 +12,12 @@
         illo, molestiae quia repudiandae vitae. A commodi cupiditate deleniti illo laudantium quaerat quo similique
         totam velit
         voluptate.</p>
+      <!-- Show album songs -->
       <div>
-        {% if songs %}
-          <h4 class="panel-title">{{ songs|length }} songs in this album</h4>
+        {% if album.song_set %}
+          <h4 class="panel-title">{{ album.song_set.count }} songs in this album</h4>
           <ul class="list-group">
-            {% for song in songs %}
+            {% for song in album.song_set.all %}
               <li class="list-group-item">
                 <div>
                   <span class="text-capitalize">{{ song.title }}</span> &nbsp;

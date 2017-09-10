@@ -4,6 +4,6 @@ from . import apps, views
 app_name = apps.MusicConfig.name
 
 urlpatterns = [
-    url(r'^$', views.index, name="index"),
-    url(r'^(?P<album_id>\d+)$', views.detail, name="detail"),
+    url(r'^$', views.IndexView.as_view(), name="index"),
+    url(r'^(?P<pk>\d+)$', views.MusicDetail.as_view(), name="detail"),
 ]
