@@ -1,5 +1,7 @@
 from django.conf.urls import url
-from . import views
+from . import views, apps
+
+app_name = apps.PublicConfig.name
 
 urlpatterns = [
     url(r'^$', views.index, name='index'),

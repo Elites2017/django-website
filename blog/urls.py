@@ -7,6 +7,6 @@ app_name = apps.BlogConfig.name
 
 urlpatterns = [
     url(r'^$', ListView.as_view(queryset=Post.objects.all().order_by("-date")[:20],
-                                template_name="blog/index.html")),
+                                template_name="blog/index.html"), name="index"),
     url(r'^(?P<pk>\d+)$', DetailView.as_view(model=Post, template_name="blog/single.html"), name="single"),
 ]

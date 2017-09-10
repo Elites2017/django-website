@@ -17,8 +17,8 @@ from django.conf.urls import url, include
 from django.contrib import admin
 
 urlpatterns = [
-    url(r"^admin/", admin.site.urls),
-    url(r'^', include('public.urls')),
-    url(r'^blog/', include('blog.urls')),
-    url(r'^music/', include('music.urls')),
+    url(r"^admin/", admin.site.urls, name="admin"),
+    url(r'^', include('public.urls'), name="public"),
+    url(r'^blog/', include('blog.urls'), name="blog"),
+    url(r'^music/', include('music.urls'), name="music"),
 ]
