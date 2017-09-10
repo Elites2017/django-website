@@ -1,4 +1,5 @@
 {% extends "public/_layout.html" %}
+{% block title %} Music {% endblock %}
 {% block body %}
   <h1 class="page-header">Music app</h1>
   {% load staticfiles %}
@@ -18,5 +19,7 @@
         </a>
       {% endfor %}
     </div>
+  {% else %}
+    <h2>No available albums</h2>
   {% endif %}
 {% endblock %}

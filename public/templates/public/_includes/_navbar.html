@@ -2,10 +2,10 @@
   <div class="inner">
     <h3 class="masthead-brand">V.I.C.T.O.R.</h3>
     <nav class="nav nav-masthead">
-      <a class="nav-link" href="/">Home</a>
-      <a class="nav-link" href="/music/">Music</a>
-      <a class="nav-link" href="/blog/">Blog</a>
-      <a class="nav-link" href="/contact/">Contact</a>
+      <a class="nav-link" href="{% url 'public:index' %}">Home</a>
+      <a class="nav-link" href="{% url 'music:index' %}">Music</a>
+      <a class="nav-link" href="{% url 'blog:index' %}">Blog</a>
+      <a class="nav-link" href="{% url 'public:contact' %}">Contact</a>
       <a class="nav-link" href="/admin/">Admin</a>
     </nav>
   </div>
