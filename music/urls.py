@@ -6,4 +6,5 @@ app_name = apps.MusicConfig.name
 urlpatterns = [
     url(r'^$', views.MusicIndex.as_view(), name="index"),
     url(r'^(?P<pk>\d+)$', views.MusicDetail.as_view(), name="detail"),
+    url(r'^album/add/$', views.AlbumCreate.as_view(), name="add-album"),
 ]

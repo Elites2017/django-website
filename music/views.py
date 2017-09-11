@@ -1,5 +1,6 @@
 from django.views.generic import ListView, DetailView
-from .models import Album, Song
+from django.views.generic.edit import CreateView
+from .models import Album
 
 
 '''
@@ -30,3 +31,8 @@ class MusicDetail(DetailView):
     model = Album
     # pk_url_kwarg = "album_id"
     template_name = "music/detail.html"
+
+
+class AlbumCreate(CreateView):
+    model = Album
+    fields = ['title', 'artist', 'genre', 'logo']
