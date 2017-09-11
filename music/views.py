@@ -1,5 +1,5 @@
 from django.views.generic import ListView, DetailView
-from .models import Album
+from .models import Album, Song
 
 
 '''
@@ -18,7 +18,7 @@ def detail(request, album_id):
 '''
 
 
-class IndexView(ListView):
+class MusicIndex(ListView):
     template_name = "music/index.html"
     context_object_name = "albums"
 
@@ -28,4 +28,5 @@ class IndexView(ListView):
 
 class MusicDetail(DetailView):
     model = Album
+    # pk_url_kwarg = "album_id"
     template_name = "music/detail.html"
