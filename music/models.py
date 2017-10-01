@@ -6,7 +6,7 @@ class Album(models.Model):
     artist = models.CharField(max_length=256, name="artist")
     title = models.CharField(max_length=256, name="title")
     genre = models.CharField(max_length=256, name="genre")
-    logo = models.CharField(max_length=512, name="logo")
+    logo = models.CharField(max_length=256, name="logo")
 
     def __str__(self):
         return 'artist: {} in {}'.format(self.artist, self.title)
